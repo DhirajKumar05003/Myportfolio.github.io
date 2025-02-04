@@ -1,313 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhiraj Kumar Personal portfolio</title>
+    <title>Dhiraj Kumar | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
 
-<style>
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
 
-    html{
-        background-color: rgb(171, 171, 232);
-    }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
 
-    header{
-        background-color: rgb(240, 217, 217);
-        margin-left: 5px;
-        margin-left: 5px;
-        
-    }
+        header img {
+            width: 150px;
+            border-radius: 50%;
+            margin-top: 10px;
+        }
 
-   h1{
-    margin-left: 10px;
-   }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 10px;
+        }
 
-   p{
-    margin-left: 10px;
-   }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
 
+        nav a:hover {
+            background: #777;
+            border-radius: 5px;
+        }
 
-   .firstblock{
-    position: relative;
-    width: 200px;
-    height: 100px;
-    margin-left: 10px;
-    background-color: whitesmoke;
-    border-radius: 2%;
-    
-   }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
 
-   .firstblock>ul{
-    position:absolute;
-    margin-top: 5%;
-    
-   }
+        section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-   img{
-        float: left;
-        height: 215px;
-        width:200px;
-        margin-left: 10px;
-        margin-top: 14px;
-   }
+        h2 {
+            color: #444;
+            margin-bottom: 10px;
+        }
 
-   #education{
+        .about {
+            text-align: center;
+            font-size: 1.2em;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
 
-        margin-left: 14px;
-    
+        .education-table, .projects-list {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
 
-   }
+        .education-table th, .education-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
 
-   .educationtable{
+        .projects-list li {
+            list-style: none;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
 
-        background-color: beige;
+        .projects-list a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
 
-   }
-
-   .Internship{
-        
-        background-color: beige;
-        height: 180px;
-        margin-top: 10px;
-        margin-left: 14px;
-
-
-   }
-   #internshipheader{
-        margin-left: 14px;
-   }
-
-   #projects{
-
-        margin-left: 14px;
-   }
-
-
-   #projectbg{
-    position: relative;
-    background-color: beige;
-    height: 500px;
-   }
-
-   #projectbg> .ab{
-    position:absolute;
-    margin-top: 2%;
-    margin-bottom: 5%;
-   }
-
-   #contactme{
-
-        margin-left: 14px;
-   }
-
-   .bottom{
-    position: relative;
-    background-color:rgb(240, 217, 217) ;
-    height: 50px;
-
-   }
-</style>
-    
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".about").style.opacity = "1";
+            document.querySelector(".about").style.transform = "translateY(0)";
+        });
+    </script>
 </head>
-
 <body>
-
-    <!-- <a href="https://www.google.com">Click Me</a> -->
-
     <header>
-        <table>
-            <tr>
-                <td>
-                    <a href="https://github.com/DhirajKumar05003" target="_blank">
-                        <img   src="https://avatars.githubusercontent.com/u/113008335?s=400&u=903e4dd5b44f299175bb69351bfa7c54b629edb2&v=4"
-                            alt="Dhiraj's Photo">
-                    </a>
-                </td>
-                <td>
-                    <h1>Dhiraj Kumar</h1>
-                    <p><i>   Tech enthusiast interested in roles related to front end development &
-                            I love to show my creativity through the design work</i></p>
-                    <p>I am pursuing Computer Science with minor in Mathematics </p>
-                    
-                    <nav>
-                        <div class="firstblock">
-                        <ul>
-                            
-                            <li><a href="#education">Education</a></li>
-                            <li><a href="#internships">Internships</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contactme">Connect with Me</a></li>
-                            
-                        </ul>
-                    </div>
-                    </nav>
-
-                </td>
-            </tr>
-        </table>
-
-
-        <hr>
+        <h1>Dhiraj Kumar</h1>
+        <p>Tech Enthusiast | Front-end Developer | Creative Designer</p>
+        <img src="https://avatars.githubusercontent.com/u/113008335?s=400&v=4" alt="Dhiraj's Photo">
     </header>
 
-    <!-- Header ends -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#internships">Internships</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <main>
+    <div class="container">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I am an aspiring Data Scientist with a strong foundation in Data Science and Machine Learning. Passionate about solving real-world problems, I apply the principles of Machine Learning and AI to simplify complex decision-making processes for businesses, research, and various industries. My goal is to leverage data-driven insights to create innovative solutions that enhance efficiency and accuracy.</p>
+        </section>
 
         <section id="education">
             <h2>Education</h2>
-            <table class="educationtable" border="">
+            <table class="education-table">
                 <tr>
-                    <th> Course </th>
-                    <th> Institute </th>
-                    <th> Year </th>
-                    <th> Result </th>
+                    <th>Course</th>
+                    <th>Institute</th>
+                    <th>Year</th>
                 </tr>
                 <tr>
-                    <td> M.C.A </td>
-                    <td> Manav Rachna Institute of research and studies </td>
-                    <td> 1st year </td>
-                    
+                    <td>M.C.A</td>
+                    <td>Manav Rachna Institute</td>
+                    <td>1st year</td>
                 </tr>
                 <tr>
-                    <td> B.Sc Honours in CS </td>
-                    <td> CVS College, Delhi University </td>
-                    <td> 7.8 CGPA </td>
-                </tr>
-                <tr>
-                    <td> 12<sup>th</sup> Grade </td>
-                    <td> DAV BSEB, Patna </td>
-                    <td> 2021 </td>
-                    <td> 96.25% </td>
+                    <td>B.Sc Honours in CS</td>
+                    <td>CVS College, Delhi University</td>
+                    <td>7.8 CGPA</td>
                 </tr>
             </table>
         </section>
 
         <section id="internships">
-            <h2 id="internshipheader">Internships</h2>
-            <article class="Internship">
-                <br>
-                <p><strong>TEDxCVS</strong> chapter </p>
-                <p><i>Social media and operation Intern</i></p>
-                <ul>
-                    <li>I was incharge of all the management of social media handle of tedx CVS </li>
-                    <li>In operation I and my team pitched the speakers who were interested in addressing the crowd in tedxcvs</li>
-                </ul>
-            </article>
+            <h2>Internships</h2>
+            <p><strong>TEDxCVS</strong> - Social Media & Operations Intern</p>
+            <ul>
+                <li>Managed TEDx social media accounts.</li>
+                <li>Pitched and coordinated with guest speakers.</li>
+            </ul>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <div id="projectbg">
-            <ul class="ab">
-                <li>
-                    <article >
-                        <a href="indianflag.html" target="_blank">
-                            <h3>Indian Flag using CSS</h3>
-                        </a>
-                        <ul>
-                            <li>
-                                <p>It was my first project using CSS in this project I used various CSS property to create the Indian flag </p>
-                            </li>
-                            <li>
-                                <p>For Ashoka Chakra I used the image from google</p>
-                            </li>
-                        </ul>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <a href="responsive.html" target="_blank">
-                            <h3>Responsive Web design</h3>
-                        </a>
-                        <ul>
-                            <li>
-                                <p>This website demonstrates the impact of changing size on the website</p>
-                            </li>
-                            <li>
-                                <p>I used media queries to make this webpage responsive to all the changes</p>
-                            </li>
-                        </ul>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <a href="resume.html" target="_blank">
-                            <h3>My portfolio without using CSS</h3>
-                        </a>
-                        <ul>
-                            <li>
-                                <p>It is my first attempt to make personal portfolio sing CSS and I used various CSS tags to make this webpage</p>
-                            </li>
-                            <li>
-                                <p>It took me 3 days to make this webpage</p>
-                            </li>
-                        </ul>
-                    </article>
-                </li>
+            <ul class="projects-list">
+                <li><a href="indianflag.html">Indian Flag using CSS</a></li>
+                <li><a href="responsive.html">Responsive Web Design</a></li>
+                <li><a href="resume.html">Personal Portfolio without CSS</a></li>
             </ul>
-        </div>
-            <hr>
         </section>
-    </main>
-
-    <aside>
-
-    </aside>
-
-    <!-- Main Section Ends -->
-
-    <footer id="contactme">
-        <h2 id="contact">Connect With Me</h2>
-        <p style="text-align: left; display: inline;" >Email: <a href="dhiraj9693279@gmail.com">dhiraj9693279@gmail.com</a></p>
-        <p style="text-align: center; display: inline;">Github: <a href="github.com/DhirajKumar05003">github.com/DhirajKumar05003</a></p>
-        <p style="text-align: end; display: inline;">Call/Whatsapp: <a href="tel:+919693279793">9693279793</a></p>
-        <br><br>
-        </a>
-        <div style="background-color: rgb(241, 241, 223); height: 40px; width: 400px; margin:auto;border: 5px seagreen; border-radius: 4px;">
-        <a href="Mydesign.html">
-            <p style="text-align: center; font-family: fantasy; font-style: oblique;font-size: x-large;color: burlywood; margin-top: 6%;">Click to view by my design gallery</menu></p>
-        </a>
     </div>
 
-    <br><br><br>
-        <p>Return back to top :<a href="#">Back To Top</a></p>
-
+    <footer id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:dhiraj9693279@gmail.com">dhiraj9693279@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/DhirajKumar05003" target="_blank">github.com/DhirajKumar05003</a></p>
+        <p>Phone: <a href="tel:+919693279793">9693279793</a></p>
     </footer>
-
-
-
-    <br><br><br>
-
-
-    <footer class="bottom">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam culpa eveniet id cum voluptatem neque inventore
-        porro veritatis? Architecto, praesentium, ipsam magni sint amet excepturi expedita iusto eaque exercitationem
-        sapiente quaerat sequi sunt necessitatibus dolor.</footer>
-
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
